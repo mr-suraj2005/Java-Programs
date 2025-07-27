@@ -1,0 +1,16 @@
+class palindrome {
+    public static void main(String[] args) {
+        int a=131;
+        int temp=a;
+        int div=1,sum=0;
+        while(a>0){
+            div=a%10;
+            sum=sum*10+div;
+            a/=10;
+        }
+        if(temp==sum)
+        System.out.println(temp+" is a palindrome number");
+        else 
+        System.out.println(temp+" is not a Palindrome number");
+    }
+}
