@@ -1,0 +1,17 @@
+class Armstrong {
+    public static void main(String[] args) {
+        int a=153;
+        int temp=a;
+        int div=1,sum=0;
+        while(a>0)
+        {
+            div=a%10;
+            sum+=(int)Math.pow(div,3);
+            a/=10;
+        }
+        if(temp==sum)
+        System.out.println(temp+" is an armstrong number");
+        else
+        System.out.println(temp+" is not an armstrong number");
+    }
+}
