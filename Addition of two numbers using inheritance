@@ -1,0 +1,42 @@
+import java.util.*;
+
+class Addition {
+    int num1, num2;
+
+    void inputNumbers(int a, int b) {
+        num1 = a;
+        num2 = b;
+    }
+
+    void displayNumbers() {
+        System.out.println("Number 1 = " + num1);
+        System.out.println("Number 2 = " + num2);
+    }
+}
+
+class Sum extends Addition {
+    void calculateSum() {
+        int sum = num1 + num2;
+        System.out.println("Summation of " + num1 + " + " + num2 + " = " + sum);
+    }
+}
+
+// Main class (can extend Sum if you want to show multi-level inheritance)
+class InheritanceSum extends Sum {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter 1st number = ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter 2nd number = ");
+        int b = sc.nextInt();
+
+        // You can use InheritanceSum object since it extends Sum
+        InheritanceSum obj = new InheritanceSum();
+
+        obj.inputNumbers(a, b);   // from Addition
+        obj.displayNumbers();     // from Addition
+        obj.calculateSum();       // from Sum
+    }
+}
