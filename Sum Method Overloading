@@ -1,0 +1,18 @@
+public class SumMethodOverloading
+{
+	int sum(int a, int b) {
+	    return a+b;
+	}
+	int sum(int a,int b, int c) {
+	    return a+b+c;
+	}
+	double sum(double a, double b) {
+	    return a+b;
+	}
+	public static void main(String args[]) {
+	    SumMethodOverloading s = new SumMethodOverloading();
+	    System.out.println("Sum of the 1st method is: " +s.sum(2,3));
+	    System.out.println("Sum of the 2nd method is: " +s.sum(2,3,4));
+	    System.out.println("Sum of the 3rd method is: " +s.sum(1.5,1.5));
+	}
+}
