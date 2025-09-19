@@ -1,0 +1,19 @@
+import java.util.*;
+import java.util.Random;
+    class RockPaperScissor{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("0 for ROCK\n1 for PAPER\n2 for SCISSOR\n");
+		int yc = sc.nextInt();
+		System.out.println("You choose : " + yc);
+		Random random = new Random();
+		int cc = random.nextInt(3);
+		System.out.println("Computer choose : " + cc);
+		if(yc == cc)
+		System.out.println("Match draw! ");
+		else if(yc==0 && cc==1 || yc==0 && cc==2 || yc==2 && cc==1)
+		System.out.println("You wins! ");
+		else 
+		System.out.println("Computer wins! ");
+	}
+}
